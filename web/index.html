@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Javascript -->
+    <script src="script.js"></script>
+
+    <title>Find your Bookmaker</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1>Find the Bookmaker with the best Odds for your Sportstype!</h1>
+    </div>
+    <div class="container-fluid">
+        <form id="bookmakerForm">
+            <div class="form-group">
+                <label for="sportsType">Sports Type</label>
+                <select class="form-control" id="sportsType">
+                    <!-- Options will be populated dynamically using JavaScript -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="region">Region</label>
+                <select class="form-control" id="region">
+                    <option value="us">US</option>
+                    <option value="us2">US2</option>
+                    <option value="uk">UK</option>
+                    <option value="eu">EU</option>
+                    <option value="au">AU</option>
+                </select>
+            </div>
+            <button type="button" id="getOddsBtn" class="btn btn-primary" onclick="findBestBookmaker()">Find Best Bookmaker</button>
+            <div class="form-group mt-4">
+                <label for="bookmaker">Bookmaker</label>
+                <input type="text" class="form-control" id="bookmaker" readonly>
+            </div>
+            <div class="form-group">
+                <label for="averageMargins">Average Margins</label>
+                <input type="number" class="form-control" id="averageMargins" readonly>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
