@@ -17,6 +17,7 @@ def getSports():
     deleteAllSports()
     response = requests.get(url=sportsUrl)
     data = response.json()
+    data = [sport for sport in data if not sport['has_outrights']]
     sportsCollection.insert_many(data)
     sports = [{'key': sport['key'], 'title': sport['title']} for sport in data]
     return sports
